@@ -1,28 +1,4 @@
 {
-  "_comment": "单一事实来源：主页 News/新闻栏 + news.html 时间线的数据。手工或由 update_homepage.py add 命令写入。按 date 降序展示。",
-  "items": [
-    {
-      "date": "2026-08-15",
-      "type": "paper",
-      "venue": "HPCA",
-      "venue_year": 2027,
-      "ccf": "A",
-      "first_author": "王俊杰",
-      "first_author_en": "Junjie Wang",
-      "equal_first": false,
-      "title_zh": "（示例）面向高效大模型训练的并行推理优化",
-      "title_en": "（示例）Efficient Parallel Inference Optimization for Large-Model Training",
-      "status_zh": "被接收",
-      "status_en": "accepted",
-      "note_zh": "",
-      "note_en": ""
-    },
-    {
-      "date": "2026-07-20",
-      "type": "award",
-      "title_zh": "（示例）荣获 ACM SIGDA 突出青年学者奖",
-      "note_zh": "",
-      "note_en": ""
-    }
-  ]
+  "_comment": "单一事实来源：主页 News/新闻栏 + news.html 时间线的数据。用 `python3 maintain.py add` 添加，或手工编辑。按 date 降序展示。",
+  "items": []
 }
