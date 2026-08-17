@@ -98,6 +98,9 @@
   }
   h2.sec::before { content: ""; width: 5px; height: 22px; background: var(--sjtu-red); border-radius: 2px; }
   h3 { color: var(--navy); font-size: 17px; margin: 20px 0 8px; }
+  h4 { color: var(--navy); font-size: 15px; margin: 16px 0 6px; }
+  ul.plain, .awards { overflow-wrap: break-word; word-break: break-word; }
+  ul.plain li { overflow-wrap: break-word; word-break: break-word; }
 
   /* Stats strip */
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 20px 0 6px; }
@@ -258,7 +261,7 @@
     <h3 class="zh-only">教育背景</h3>
     <ul class="plain">
       <li class="en-only">Ph.D., Computer Science &amp; Engineering, The Chinese University of Hong Kong (2013), advisor Prof. Qiang Xu</li>
-      <li class="zh-only">工学博士，香港中文大学 计算机科学与工程（2013），导师：徐强 教授</li>
+      <li class="zh-only">工学博士，香港中文大学 计算机科学与工程（2013），导师：徐强教授</li>
       <li class="en-only">M.Phil., Computer Science &amp; Engineering, The Chinese University of Hong Kong (2010)</li>
       <li class="zh-only">哲学硕士，香港中文大学 计算机科学与工程（2010）</li>
       <li class="en-only">B.Eng., Computer Science, Shanghai Jiao Tong University (2007)</li>
@@ -546,15 +549,21 @@
 
     <h3 class="en-only">Alumni &amp; Placement</h3>
     <h3 class="zh-only">已毕业学生及去向</h3>
-    <p style="max-width: 900px; font-size:14px; color:var(--muted); margin-top:8px;">
-      <span class="en-only">Graduates have gone on to faculty positions and leading industry labs, including:</span>
-      <span class="zh-only">已毕业学生多进入高校教职及顶级产业实验室，包括：</span>
-    </p>
+
+    <h4 class="en-only">Advised by Li Jiang (first supervisor)</h4>
+    <h4 class="zh-only">本人指导（第一导师）</h4>
     <ul class="plain">
-      <li class="en-only"><strong>Academia:</strong> Fangxin Liu (Assistant Professor, SJTU), Zhuoran Song (Associate Professor, SJTU), Shiyuan Huang (Faculty, Shanghai University), Zongwu Wang (SJTU–Qizhi Postdoc). Several alumni returned for doctoral study after their Master's — e.g. <strong>Peng Xu</strong> and <strong>Yilong Zhao</strong> (currently a PhD student in the group), both of whom completed a Master's degree here.</li>
-      <li class="zh-only"><strong>学术界：</strong>刘方鑫（上海交大助理教授）、宋卓然（上海交大副教授）、黄世远（上海大学教师）、汪宗武（上海交大—期智博士后）。多位校友硕士毕业后回组继续攻读博士——如<strong>许鹏</strong>、<strong>赵怿龙</strong>（现为本组博士生），二人均在本组完成硕士学业。</li>
-      <li class="en-only"><strong>Industry:</strong> Huawei (Tao Yang, Hui Ma, Longyu Zhao, Tian Li, Xiangwei Huang), Alibaba/Ant (Xiaoyi Sun), Tencent (Feng Xu), ByteDance (Yunyan Hong, Xingyi Wang), megvii (Chaoqun Chu, Jianfei Wang, Tianjian Li), NVIDIA (Chengwen Xu), SenseTime (Zishan Jiang), Moore Threads (Yiyuan Zhou), miHoYo (Jun Li), DJI (Yi Liu), NetEase Games (Yihuang Huang), Google (Xiangyu Wu), and international PhD programs (UT-Austin, Duke, UCSD, UCLA).</li>
-      <li class="zh-only"><strong>产业界：</strong>华为（杨涛、马辉、赵龙宇、李甜、黄翔伟）、蚂蚁（孙肖仪）、腾讯（许峰）、字节跳动（洪韫妍、王星艺）、旷视（褚超群、Jianfei Wang、Tianjian Li）、NVIDIA（Chengwen Xu）、商汤（Zishan Jiang）、摩尔线程（周依源）、米哈游（Jun Li）、大疆（Yi Liu）、网易游戏（Yihuang Huang）、Google（Xiangyu Wu），以及海外博士项目（UT-Austin、Duke、UCSD、UCLA）。</li>
+      <li class="en-only"><strong>Academia:</strong> Fangxin Liu (Assistant Professor, SJTU) · Shiyuan Huang (Faculty, Shanghai University) · Zongwu Wang (SJTU–Qizhi Postdoc). Several alumni returned for a PhD after their Master's — <strong>Peng Xu</strong> (SJTU–Qizhi PhD) and <strong>Yilong Zhao</strong> (currently a PhD student in the group).</li>
+      <li class="zh-only"><strong>学术界：</strong>刘方鑫（上海交大助理教授）、黄世远（上海大学教师）、汪宗武（上海交大–期智博士后）。多位校友硕士毕业后回组攻读博士——许鹏（期智联合博士）、赵怿龙（现为本组博士生）。</li>
+      <li class="en-only"><strong>Industry:</strong> Huawei (Tao Yang · Hui Ma · Longyu Zhao · Tian Li) · Ant Group (Xiaoyi Sun) · Tencent (Feng Xu) · ByteDance (Yunyan Hong · Xingyi Wang) · megvii (Chaoqun Chu) · Moore Threads (Yiyuan Zhou) · MING HONG Investment (Qidong Tang).</li>
+      <li class="zh-only"><strong>产业界：</strong>华为（杨涛、马辉、赵龙宇、李甜）、蚂蚁（孙肖仪）、腾讯（许峰）、字节跳动（洪韫妍、王星艺）、旷视（褚超群）、摩尔线程（周依源）、明泓投资（唐启栋）。</li>
+    </ul>
+
+    <h4 class="en-only">Co-advised (with collaborators)</h4>
+    <h4 class="zh-only">协助指导</h4>
+    <ul class="plain">
+      <li class="en-only">Zhuoran Song (Associate Professor, SJTU) · Jianfei Wang (SenseTime) · Tianjian Li (SenseTime) · Zishan Jiang (SenseTime) · Chengwen Xu (NVIDIA) · Jun Li (miHoYo) · Yi Liu (DJI) · Yihuang Huang (Netease Games) · Lerong Chen (Entrepreneurship) · Hao Chen (UT-Austin) · Mengyun Liu (Duke) · Wenkang Yu (UCSD) · Jiawen Li (UCLA) · Xiangyu Bi (UT-Austin) · Chengkai Zhu (UCSD).</li>
+      <li class="zh-only">宋卓然（上海交大副教授）、王建飞（商汤科技）、李天健（商汤科技）、Zishan Jiang（商汤）、Chengwen Xu（NVIDIA）、Jun Li（米哈游）、Yi Liu（大疆）、Yihuang Huang（网易游戏）、Lerong Chen（创业）、以及多位于海外高校继续深造的毕业生（UT-Austin、Duke、UCSD、UCLA）。</li>
     </ul>
     <div class="note">
       <strong class="en-only">Join us.</strong><strong class="zh-only">加入我们。</strong>
