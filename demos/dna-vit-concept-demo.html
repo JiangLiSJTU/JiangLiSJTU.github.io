@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNA-ViT Concept Demo — Li Jiang</title>
+<meta name="description" content="Interactive concept demo for DNA-ViT: Developmental Neural Archiving for Storage-Efficient Vision Transformers.">
+<style>
+  body { margin:0; background:#f6f7fb; }
+  .demo-topbar { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif; background:#0F1E3D; color:#dfe7f5; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .demo-topbar strong { color:#fff; }
+  .demo-topbar a { color:#fff; text-decoration:none; font-size:13px; border:1px solid rgba(255,255,255,.32); padding:5px 9px; border-radius:999px; }
+  .demo-topbar a:hover { background:rgba(255,255,255,.12); }
+  main { padding:18px 12px 28px; }
+</style>
+</head>
+<body>
+  <div class="demo-topbar">
+    <div><strong>DNA-ViT Concept Demo</strong> · Developmental Neural Archiving for Storage-Efficient Vision Transformers</div>
+    <a href="../index.html">← Back to homepage</a>
+  </div>
+  <main>
+<div id="dna-vit-concept-demo-20260817-v2" class="dnv2">
+  <style>
+    #dna-vit-concept-demo-20260817-v2.dnv2{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:linear-gradient(135deg,#f8fbff 0%,#f7f2ff 52%,#fff7ed 100%);border:1px solid rgba(66,84,128,.18);border-radius:22px;box-shadow:0 18px 55px rgba(34,48,92,.13);overflow:hidden;max-width:1120px;margin:0 auto}
+    #dna-vit-concept-demo-20260817-v2 *{box-sizing:border-box}
+    #dna-vit-concept-demo-20260817-v2 .hero{padding:22px 26px 16px;background:radial-gradient(circle at 18% 0%,rgba(99,102,241,.22),transparent 34%),radial-gradient(circle at 86% 4%,rgba(20,184,166,.18),transparent 28%),linear-gradient(90deg,rgba(255,255,255,.92),rgba(255,255,255,.62));border-bottom:1px solid rgba(66,84,128,.13)}
+    #dna-vit-concept-demo-20260817-v2 h2{margin:0;color:#10172a;font-size:27px;line-height:1.12;letter-spacing:-.03em}
+    #dna-vit-concept-demo-20260817-v2 .subtitle{margin:8px 0 0;color:#43516b;font-size:13px;line-height:1.5;max-width:980px}
+    #dna-vit-concept-demo-20260817-v2 .wrap{padding:14px;display:grid;gap:14px}
+    #dna-vit-concept-demo-20260817-v2 .panel{background:rgba(255,255,255,.80);border:1px solid rgba(75,91,134,.14);border-radius:18px;padding:14px;box-shadow:0 8px 28px rgba(47,62,103,.07);backdrop-filter:blur(8px)}
+    #dna-vit-concept-demo-20260817-v2 .panel-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;color:#172033;font-size:14px;font-weight:900;letter-spacing:-.01em}
+    #dna-vit-concept-demo-20260817-v2 .tag{font-size:11px;font-weight:850;color:#667085;background:#f4f6fb;border-radius:999px;padding:5px 8px;white-space:nowrap}
+    #dna-vit-concept-demo-20260817-v2 .idea-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    #dna-vit-concept-demo-20260817-v2 .idea-card{position:relative;min-height:260px;border-radius:18px;padding:15px;background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid rgba(79,96,142,.15);overflow:hidden}
+    #dna-vit-concept-demo-20260817-v2 .idea-card h3{margin:0 0 10px;font-size:15px;color:#0f172a;letter-spacing:-.01em}
+    #dna-vit-concept-demo-20260817-v2 .idea-card .caption{position:absolute;left:15px;right:15px;bottom:12px;color:#526071;font-size:12px;font-weight:700;line-height:1.4}
+    #dna-vit-concept-demo-20260817-v2 .static-model{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:88px;align-items:end;margin:18px 0 12px}
+    #dna-vit-concept-demo-20260817-v2 .static-model i{display:block;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,#cbd5e1,#94a3b8);height:50px;position:relative}
+    #dna-vit-concept-demo-20260817-v2 .static-model i.hot:after{content:"!";position:absolute;top:-12px;right:-4px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#ef4444;color:white;font-size:11px;font-weight:900;box-shadow:0 4px 10px rgba(239,68,68,.3)}
+    #dna-vit-concept-demo-20260817-v2 .device-row{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+    #dna-vit-concept-demo-20260817-v2 .device{flex:1;border:1px solid #e2e8f0;border-radius:14px;padding:9px;background:#f8fafc;text-align:center;color:#475569;font-size:11px;font-weight:850}
+    #dna-vit-concept-demo-20260817-v2 .dna-helix{height:96px;margin:10px 0 10px;position:relative}
+    #dna-vit-concept-demo-20260817-v2 .dna-helix svg{width:100%;height:100%;display:block}
+    #dna-vit-concept-demo-20260817-v2 .module-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    #dna-vit-concept-demo-20260817-v2 .module{border-radius:14px;padding:10px 8px;text-align:center;font-size:11px;font-weight:900;color:#172033;background:#f8fafc;border:1px solid #e2e8f0;min-height:58px;display:grid;place-items:center}
+    #dna-vit-concept-demo-20260817-v2 .module:nth-child(1){background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+    #dna-vit-concept-demo-20260817-v2 .module:nth-child(2){background:#ecfeff;color:#0e7490;border-color:#a5f3fc}
+    #dna-vit-concept-demo-20260817-v2 .module:nth-child(3){background:#fff7ed;color:#c2410c;border-color:#fed7aa}
+    #dna-vit-concept-demo-20260817-v2 .demo-grid{display:grid;grid-template-columns:310px 1fr;gap:12px;align-items:stretch}
+    #dna-vit-concept-demo-20260817-v2 .controls{display:grid;gap:11px}
+    #dna-vit-concept-demo-20260817-v2 label{display:block;font-size:12px;font-weight:900;color:#344161;margin-bottom:7px}
+    #dna-vit-concept-demo-20260817-v2 input[type="range"]{width:100%;accent-color:#6366f1}
+    #dna-vit-concept-demo-20260817-v2 select{width:100%;border:1px solid rgba(74,91,132,.23);border-radius:12px;padding:9px 10px;background:white;color:#172033;font-weight:800}
+    #dna-vit-concept-demo-20260817-v2 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:2px}
+    #dna-vit-concept-demo-20260817-v2 .metric{padding:10px;border-radius:14px;background:#0f172a;color:white;min-height:68px;position:relative;overflow:hidden}
+    #dna-vit-concept-demo-20260817-v2 .metric:nth-child(2){background:#0f766e}
+    #dna-vit-concept-demo-20260817-v2 .metric:nth-child(3){background:#7c3aed}
+    #dna-vit-concept-demo-20260817-v2 .metric:nth-child(4){background:#c2410c}
+    #dna-vit-concept-demo-20260817-v2 .metric small{display:block;opacity:.76;font-size:11px;font-weight:800}
+    #dna-vit-concept-demo-20260817-v2 .metric strong{display:block;font-size:21px;margin-top:5px;letter-spacing:-.03em}
+    #dna-vit-concept-demo-20260817-v2 .main-effect{display:grid;grid-template-rows:auto auto 1fr;gap:10px}
+    #dna-vit-concept-demo-20260817-v2 .stream{border-radius:18px;background:linear-gradient(180deg,#ffffff,#f7faff);border:1px solid rgba(79,96,142,.15);padding:13px}
+    #dna-vit-concept-demo-20260817-v2 .stream-title{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:900;color:#344161;margin-bottom:9px}
+    #dna-vit-concept-demo-20260817-v2 .bitstream{height:46px;border-radius:999px;background:#e2e8f0;overflow:hidden;display:flex;border:1px solid rgba(100,116,139,.18)}
+    #dna-vit-concept-demo-20260817-v2 .bitseg{height:100%;display:grid;place-items:center;color:white;font-size:11px;font-weight:950;transition:width .25s ease, opacity .25s ease;white-space:nowrap;overflow:hidden}
+    #dna-vit-concept-demo-20260817-v2 .bitseg.s1{background:#4f46e5}#dna-vit-concept-demo-20260817-v2 .bitseg.s2{background:#0891b2}#dna-vit-concept-demo-20260817-v2 .bitseg.s3{background:#16a34a}#dna-vit-concept-demo-20260817-v2 .bitseg.s4{background:#f97316}
+    #dna-vit-concept-demo-20260817-v2 .effect-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    #dna-vit-concept-demo-20260817-v2 .chart-card{border-radius:18px;background:linear-gradient(180deg,#fff,#f8fbff);border:1px solid rgba(79,96,142,.15);padding:10px;min-height:252px}
+    #dna-vit-concept-demo-20260817-v2 .chart-head{font-size:12px;font-weight:950;color:#172033;margin:0 0 4px}
+    #dna-vit-concept-demo-20260817-v2 svg{width:100%;height:218px;display:block;overflow:visible}
+    #dna-vit-concept-demo-20260817-v2 .axis{stroke:#cbd5e1;stroke-width:1}
+    #dna-vit-concept-demo-20260817-v2 .tick{fill:#64748b;font-size:10px;font-weight:700}
+    #dna-vit-concept-demo-20260817-v2 .bar-label{fill:#172033;font-size:11px;font-weight:850}
+    #dna-vit-concept-demo-20260817-v2 .bar-value{fill:#475569;font-size:10px;font-weight:850}
+    #dna-vit-concept-demo-20260817-v2 .line{fill:none;stroke:#6366f1;stroke-width:3;stroke-linecap:round}
+    #dna-vit-concept-demo-20260817-v2 .pt{fill:white;stroke:#6366f1;stroke-width:3}
+    #dna-vit-concept-demo-20260817-v2 .selected-pt{fill:#6366f1;stroke:white;stroke-width:3;filter:drop-shadow(0 3px 5px rgba(99,102,241,.4))}
+    #dna-vit-concept-demo-20260817-v2 .heat{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;height:150px;align-items:end;margin-top:6px}
+    #dna-vit-concept-demo-20260817-v2 .blk{display:flex;flex-direction:column;gap:4px;height:100%;justify-content:end}
+    #dna-vit-concept-demo-20260817-v2 .seg{border-radius:8px 8px 4px 4px;min-height:8px;transition:height .25s ease,opacity .25s ease;position:relative}
+    #dna-vit-concept-demo-20260817-v2 .seg.att{background:linear-gradient(180deg,#38bdf8,#2563eb)}
+    #dna-vit-concept-demo-20260817-v2 .seg.mlp{background:linear-gradient(180deg,#f59e0b,#ef4444)}
+    #dna-vit-concept-demo-20260817-v2 .blk small{text-align:center;color:#64748b;font-size:9px;font-weight:850}
+    #dna-vit-concept-demo-20260817-v2 .legend{display:flex;gap:12px;flex-wrap:wrap;color:#64748b;font-size:11px;font-weight:800;margin-top:8px}
+    #dna-vit-concept-demo-20260817-v2 .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}#dna-vit-concept-demo-20260817-v2 .dot.blue{background:#2563eb}#dna-vit-concept-demo-20260817-v2 .dot.orange{background:#ef4444}#dna-vit-concept-demo-20260817-v2 .dot.purple{background:#6366f1}#dna-vit-concept-demo-20260817-v2 .dot.gray{background:#94a3b8}
+    #dna-vit-concept-demo-20260817-v2 .takeaways{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    #dna-vit-concept-demo-20260817-v2 .takeaways div{border-radius:16px;padding:13px;background:linear-gradient(135deg,#fff,#f7faff);border:1px solid rgba(72,89,133,.13)}
+    #dna-vit-concept-demo-20260817-v2 .takeaways b{display:block;font-size:13px;color:#0f172a}
+    #dna-vit-concept-demo-20260817-v2 .takeaways span{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:#526071;font-weight:700}
+    @media(max-width:960px){#dna-vit-concept-demo-20260817-v2 .idea-grid,#dna-vit-concept-demo-20260817-v2 .demo-grid,#dna-vit-concept-demo-20260817-v2 .effect-grid,#dna-vit-concept-demo-20260817-v2 .takeaways{grid-template-columns:1fr}#dna-vit-concept-demo-20260817-v2 .metrics{grid-template-columns:1fr 1fr}}
+  </style>
+  <div class="hero">
+    <h2>DNA-ViT：一个可渐进“发育”的 ViT 模型档案</h2>
+    <p class="subtitle">核心演示：静态 PTQ 无法适配异构预算；DNA-ViT 先恢复关键功能单元，再随 bitstream 到达逐步细化模型。</p>
+  </div>
+  <div class="wrap">
+    <section class="panel">
+      <div class="panel-title"><strong>关键问题与核心思路</strong><span class="tag">visual pitch</span></div>
+      <div class="idea-grid">
+        <div class="idea-card">
+          <h3>现有压缩：统一降比特</h3>
+          <div class="static-model" aria-label="uniform quantization visual">
+            <i></i><i></i><i class="hot"></i><i></i><i class="hot"></i><i></i><i></i><i class="hot"></i><i></i><i></i><i class="hot"></i><i></i>
+          </div>
+          <svg viewBox="0 0 460 82" aria-label="one size fits all devices" style="height:82px">
+            <line x1="35" y1="40" x2="425" y2="40" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="35" cy="40" r="16" fill="#94a3b8"/><text x="35" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="900">W4</text>
+            <circle cx="165" cy="40" r="16" fill="#94a3b8"/><text x="165" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="900">W4</text>
+            <circle cx="295" cy="40" r="16" fill="#94a3b8"/><text x="295" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="900">W4</text>
+            <circle cx="425" cy="40" r="16" fill="#94a3b8"/><text x="425" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="900">W4</text>
+            <text x="230" y="76" text-anchor="middle" fill="#64748b" font-size="12" font-weight="800">所有层同等对待 → 关键单元被破坏</text>
+          </svg>
+          <div class="caption">问题：ViT 的 Attention / MLP / block 敏感度不同，单一低比特模型难以服务多种存储与带宽预算。</div>
+        </div>
+        <div class="idea-card">
+          <h3>DNA-ViT：优先表达关键“编码区”</h3>
+          <div class="dna-helix" aria-label="DNA style progressive archive">
+            <svg viewBox="0 0 460 96">
+              <path d="M20,20 C95,82 145,82 220,20 S345,-42 440,76" fill="none" stroke="#6366f1" stroke-width="5" stroke-linecap="round"/>
+              <path d="M20,76 C95,14 145,14 220,76 S345,138 440,20" fill="none" stroke="#14b8a6" stroke-width="5" stroke-linecap="round"/>
+              <g stroke="#cbd5e1" stroke-width="3">
+                <line x1="52" y1="42" x2="52" y2="54"/><line x1="92" y1="66" x2="92" y2="30"/><line x1="132" y1="73" x2="132" y2="23"/><line x1="172" y1="58" x2="172" y2="38"/><line x1="212" y1="24" x2="212" y2="72"/><line x1="252" y1="39" x2="252" y2="57"/><line x1="292" y1="72" x2="292" y2="24"/><line x1="332" y1="68" x2="332" y2="28"/><line x1="372" y1="42" x2="372" y2="54"/><line x1="412" y1="17" x2="412" y2="79"/>
+              </g>
+              <rect x="64" y="10" width="112" height="18" rx="9" fill="#4f46e5"/><text x="120" y="23" text-anchor="middle" fill="white" font-size="11" font-weight="900">critical</text>
+              <rect x="248" y="68" width="126" height="18" rx="9" fill="#f97316"/><text x="311" y="81" text-anchor="middle" fill="white" font-size="11" font-weight="900">refinement</text>
+            </svg>
+          </div>
+          <div class="module-row">
+            <div class="module">3D Haar<br/>高密度映射</div>
+            <div class="module">Hessian<br/>敏感度排序</div>
+            <div class="module">Bitplane<br/>渐进重构</div>
+          </div>
+          <div class="caption">思路：把模型存成可分阶段接收的 archive；先得到 functional skeleton，再逐步恢复到高精度模型。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><strong>核心效果交互演示</strong><span class="tag">拖动变量，右侧立即变化</span></div>
+      <div class="demo-grid">
+        <aside class="controls">
+          <div>
+            <label for="dnv2-budget">已接收 archive 比例：<span id="dnv2-budget-label">75%</span></label>
+            <input id="dnv2-budget" type="range" min="35" max="100" value="75" step="1">
+          </div>
+          <div>
+            <label for="dnv2-bandwidth">传输带宽 MiB/s：<span id="dnv2-bandwidth-label">10</span></label>
+            <input id="dnv2-bandwidth" type="range" min="2" max="50" value="10" step="1">
+          </div>
+          <div>
+            <label for="dnv2-model">backbone</label>
+            <select id="dnv2-model"><option>ViT-S</option><option selected>ViT-B</option><option>DeiT-S</option><option>DeiT-B</option><option>Swin-S</option><option>Swin-B</option></select>
+          </div>
+          <div>
+            <label for="dnv2-bit">量化设置</label>
+            <select id="dnv2-bit"><option value="4">W4/A4</option><option value="6" selected>W6/A6</option></select>
+          </div>
+          <div class="metrics">
+            <div class="metric"><small>当前 Top-1</small><strong id="dnv2-top1">49.9%</strong></div>
+            <div class="metric"><small>已传 payload</small><strong id="dnv2-payload">7.59 MiB</strong></div>
+            <div class="metric"><small>等待时间</small><strong id="dnv2-time">0.76 s</strong></div>
+            <div class="metric"><small>恢复阶段</small><strong id="dnv2-stage">Coding</strong></div>
+          </div>
+        </aside>
+        <main class="main-effect">
+          <div class="stream">
+            <div class="stream-title"><span>Progressive code-stream</span><span id="dnv2-stream-label">coding regions received</span></div>
+            <div class="bitstream" aria-label="progressive bitstream">
+              <div class="bitseg s1" id="dnv2-s1">skeleton</div>
+              <div class="bitseg s2" id="dnv2-s2">critical</div>
+              <div class="bitseg s3" id="dnv2-s3">coding</div>
+              <div class="bitseg s4" id="dnv2-s4">refine</div>
+            </div>
+          </div>
+          <div class="effect-grid">
+            <div class="chart-card">
+              <div class="chart-head">渐进重构：越接收越接近完整模型</div>
+              <svg id="dnv2-recovery" viewBox="0 0 430 218" role="img" aria-label="Progressive reconstruction curve"></svg>
+            </div>
+            <div class="chart-card">
+              <div class="chart-head" id="dnv2-chart-title">同等 bit-width 下的 Top-1 对比</div>
+              <svg id="dnv2-bars" viewBox="0 0 430 218" role="img" aria-label="Top-1 comparison"></svg>
+            </div>
+          </div>
+          <div class="chart-card" style="min-height:220px">
+            <div class="chart-head">敏感度优先保护：关键块先拿到更多 archive 预算</div>
+            <div class="heat" id="dnv2-heat" aria-label="Sensitivity allocation map"></div>
+            <div class="legend"><span><i class="dot blue"></i>Attention</span><span><i class="dot orange"></i>MLP</span><span><i class="dot purple"></i>接收比例控制保留程度</span><span><i class="dot gray"></i>block index 0–11</span></div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title"><strong>一句话 takeaway</strong><span class="tag">for group meeting</span></div>
+      <div class="takeaways">
+        <div><b>压缩对象从“静态权重”变成“可表达档案”</b><span>一个 archive 可以服务不同带宽、存储与精度需求。</span></div>
+        <div><b>关键单元优先恢复</b><span>Hessian-aware allocation 把预算投向对任务最敏感的功能区域。</span></div>
+        <div><b>低预算时收益最大</b><span>先恢复 functional skeleton，让模型在完整 stream 到达前就可用。</span></div>
+      </div>
+    </section>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('dna-vit-concept-demo-20260817-v2');
+      if (!root) return;
+      const $ = (id) => root.querySelector('#' + id);
+      const budgetEl = $('dnv2-budget');
+      const bandwidthEl = $('dnv2-bandwidth');
+      const modelEl = $('dnv2-model');
+      const bitEl = $('dnv2-bit');
+      const payloadFull = 10.119;
+      const recoveryAnchors = [[35,17.5],[45,27.0],[65,42.0],[75,49.92],[85,72.20],[100,80.10]];
+      const top1 = {
+        '6': {
+          'ViT-S': {PTQ4ViT:78.63, APQ:79.10, TSPTQ:79.45, AMP:79.98, Ours:80.10, FP:81.39},
+          'ViT-B': {PTQ4ViT:81.65, APQ:82.21, TSPTQ:82.29, AMP:82.70, Ours:83.59, FP:84.53},
+          'DeiT-S': {PTQ4ViT:76.28, APQ:77.76, TSPTQ:77.18, AMP:78.70, Ours:79.02, FP:79.85},
+          'DeiT-B': {PTQ4ViT:80.25, APQ:80.42, TSPTQ:80.61, AMP:81.25, Ours:81.38, FP:81.80},
+          'Swin-S': {PTQ4ViT:82.38, APQ:82.67, TSPTQ:82.60, AMP:82.62, Ours:82.70, FP:83.21},
+          'Swin-B': {PTQ4ViT:84.01, APQ:84.18, TSPTQ:84.16, AMP:84.50, Ours:84.89, FP:85.27}
+        },
+        '4': {
+          'ViT-S': {PTQ4ViT:42.57, APQ:47.95, TSPTQ:52.56, AMP:55.88, Ours:58.62, FP:81.39},
+          'ViT-B': {PTQ4ViT:30.69, APQ:41.41, TSPTQ:50.10, AMP:61.84, Ours:73.80, FP:84.53},
+          'DeiT-S': {PTQ4ViT:34.08, APQ:43.55, TSPTQ:45.08, AMP:68.43, Ours:69.13, FP:79.85},
+          'DeiT-B': {PTQ4ViT:64.39, APQ:67.48, TSPTQ:69.45, AMP:76.14, Ours:78.32, FP:81.80},
+          'Swin-S': {PTQ4ViT:76.09, APQ:77.15, TSPTQ:76.30, AMP:77.20, Ours:77.38, FP:83.21},
+          'Swin-B': {PTQ4ViT:74.02, APQ:76.48, TSPTQ:73.28, AMP:76.51, Ours:80.67, FP:85.27}
+        }
+      };
+      const sensitivity = [[0.92,0.42],[0.77,0.58],[0.68,0.73],[0.53,0.84],[0.45,0.91],[0.38,0.97],[0.49,0.86],[0.61,0.78],[0.76,0.69],[0.88,0.62],[0.72,0.75],[0.58,0.93]];
+      function interp(points, x){
+        if (x <= points[0][0]) return points[0][1];
+        for (let i=1;i<points.length;i++){
+          if (x <= points[i][0]){
+            const a=points[i-1], b=points[i];
+            return a[1] + (b[1]-a[1])*(x-a[0])/(b[0]-a[0]);
+          }
+        }
+        return points[points.length-1][1];
+      }
+      function stageFor(p){
+        if (p < 50) return ['Skeleton','functional skeleton'];
+        if (p < 75) return ['Core','core units received'];
+        if (p < 90) return ['Coding','coding regions received'];
+        return ['Refined','refinement received'];
+      }
+      function clearSvg(svg){ while(svg.firstChild) svg.removeChild(svg.firstChild); }
+      function el(name, attrs){ const n=document.createElementNS('http://www.w3.org/2000/svg', name); Object.entries(attrs || {}).forEach(([k,v])=>n.setAttribute(k,v)); return n; }
+      function text(svg, x, y, str, cls, anchor){ const t=el('text',{x,y,class:cls || '', 'text-anchor':anchor || 'start'}); t.textContent=str; svg.appendChild(t); return t; }
+      function drawRecovery(){
+        const svg = $('dnv2-recovery'); clearSvg(svg);
+        const W=430,H=218,m={l:42,r:18,t:14,b:32}, xMin=35,xMax=100,yMin=0,yMax=85;
+        const X=x=>m.l+(x-xMin)/(xMax-xMin)*(W-m.l-m.r); const Y=y=>H-m.b-(y-yMin)/(yMax-yMin)*(H-m.t-m.b);
+        svg.appendChild(el('line',{x1:m.l,y1:H-m.b,x2:W-m.r,y2:H-m.b,class:'axis'})); svg.appendChild(el('line',{x1:m.l,y1:m.t,x2:m.l,y2:H-m.b,class:'axis'}));
+        [35,50,75,100].forEach(v=>{svg.appendChild(el('line',{x1:X(v),y1:H-m.b,x2:X(v),y2:H-m.b+4,stroke:'#cbd5e1'})); text(svg,X(v),H-12,v+'%','tick','middle');});
+        [0,40,80].forEach(v=>{svg.appendChild(el('line',{x1:m.l-4,y1:Y(v),x2:m.l,y2:Y(v),stroke:'#cbd5e1'})); text(svg,33,Y(v)+4,v+'','tick','end');});
+        const samples=[]; for(let p=35;p<=100;p+=2.5) samples.push([p,interp(recoveryAnchors,p)]);
+        const lineD=samples.map((d,i)=>(i?'L':'M')+X(d[0]).toFixed(1)+' '+Y(d[1]).toFixed(1)).join(' ');
+        svg.appendChild(el('path',{d:lineD,class:'line'}));
+        recoveryAnchors.slice(3).forEach(d=>{svg.appendChild(el('circle',{cx:X(d[0]),cy:Y(d[1]),r:4.8,class:'pt'})); text(svg,X(d[0]),Y(d[1])-9,d[1].toFixed(d[1]===80.10?1:2)+'%','bar-value','middle');});
+        const p=+budgetEl.value, acc=interp(recoveryAnchors,p);
+        svg.appendChild(el('line',{x1:X(p),y1:Y(0),x2:X(p),y2:Y(acc),stroke:'#7c3aed','stroke-width':2,'stroke-dasharray':'4 4'}));
+        svg.appendChild(el('circle',{cx:X(p),cy:Y(acc),r:7,class:'selected-pt'}));
+        text(svg,W/2,H-1,'archive share','tick','middle');
+      }
+      function drawBars(){
+        const svg=$('dnv2-bars'); clearSvg(svg);
+        const bit=bitEl.value, model=modelEl.value, row=top1[bit][model];
+        $('dnv2-chart-title').textContent='同等 bit-width Top-1：W'+bit+'/A'+bit+' · '+model;
+        const baselineNames=['PTQ4ViT','APQ','TSPTQ','AMP'];
+        const bestName=baselineNames.reduce((a,b)=>row[a]>row[b]?a:b);
+        const entries=[['FP',row.FP,'#cbd5e1'],[bestName,row[bestName],'#94a3b8'],['DNA-ViT',row.Ours,'#6366f1']];
+        const W=430,H=218,m={l:72,r:24,t:16,b:30}; const max=Math.max(...entries.map(d=>d[1])); const min=Math.max(0, Math.min(...entries.map(d=>d[1]))-8);
+        const X=v=>m.l+(v-min)/(max-min)*(W-m.l-m.r); const rowH=(H-m.t-m.b)/entries.length;
+        svg.appendChild(el('line',{x1:m.l,y1:H-m.b,x2:W-m.r,y2:H-m.b,class:'axis'}));
+        entries.forEach((d,i)=>{const y=m.t+i*rowH+12; text(svg,8,y+22,d[0],'bar-label'); svg.appendChild(el('rect',{x:m.l,y,width:Math.max(2,X(d[1])-m.l),height:28,rx:10,fill:d[2],opacity:d[0]==='DNA-ViT'?'.96':'.78'})); text(svg,X(d[1])+6,y+19,d[1].toFixed(2)+'%','bar-value');});
+        const gap=row.Ours-row[bestName];
+        text(svg,W-18,18,'gain '+(gap>=0?'+':'')+gap.toFixed(2)+'%','bar-value','end');
+      }
+      function drawHeat(){
+        const g=$('dnv2-heat'); g.innerHTML=''; const b=+budgetEl.value/100;
+        sensitivity.forEach((pair,i)=>{
+          const col=document.createElement('div'); col.className='blk';
+          const a=document.createElement('div'), m=document.createElement('div'), s=document.createElement('small');
+          a.className='seg att'; m.className='seg mlp';
+          const priority=(pair[0]+pair[1])/2;
+          a.style.height=(15+pair[0]*58*Math.min(1,b+0.12))+'px';
+          m.style.height=(15+pair[1]*58*Math.min(1,b+0.12))+'px';
+          const opacity=0.25+0.75*Math.min(1,b*priority+0.18);
+          a.style.opacity=opacity; m.style.opacity=opacity;
+          s.textContent=i; col.appendChild(a); col.appendChild(m); col.appendChild(s); g.appendChild(col);
+        });
+      }
+      function updateStream(p){
+        const widths=[Math.min(p,45),Math.min(Math.max(p-45,0),25),Math.min(Math.max(p-70,0),20),Math.min(Math.max(p-90,0),10)];
+        const labels=['skeleton','critical','coding','refine'];
+        widths.forEach((w,i)=>{const n=$('dnv2-s'+(i+1)); n.style.width=(w/100*100)+'%'; n.style.opacity=w>1?1:.18; n.textContent=w>8?labels[i]:'';});
+      }
+      function update(){
+        const p=+budgetEl.value, bw=+bandwidthEl.value;
+        const acc=interp(recoveryAnchors,p), payload=payloadFull*p/100, wait=payload/bw, st=stageFor(p);
+        $('dnv2-budget-label').textContent=p+'%'; $('dnv2-bandwidth-label').textContent=bw;
+        $('dnv2-top1').textContent=acc.toFixed(acc>60?1:2)+'%'; $('dnv2-payload').textContent=payload.toFixed(2)+' MiB'; $('dnv2-time').textContent=(wait<1?wait.toFixed(2):wait.toFixed(1))+' s'; $('dnv2-stage').textContent=st[0]; $('dnv2-stream-label').textContent=st[1];
+        updateStream(p); drawRecovery(); drawBars(); drawHeat();
+      }
+      [budgetEl,bandwidthEl,modelEl,bitEl].forEach(n=>n.addEventListener('input',update));
+      update();
+    })();
+  </script>
+</div>
+
+  </main>
+</body>
+</html>
