@@ -147,6 +147,13 @@
 
   .note { font-size: 13px; color: var(--muted); background: #fff8e6; border: 1px solid #f3e4b0; border-radius: 8px; padding: 12px 14px; margin-top: 16px; }
 
+  /* News */
+  ul.news-list { list-style: none; padding: 0; margin: 0; max-width: 900px; }
+  ul.news-list li { padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; line-height: 1.55; }
+  ul.news-list li:last-child { border-bottom: none; }
+  ul.news-list .nd { display: inline-block; min-width: 92px; color: var(--sjtu-red); font-weight: 600; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  #news .tag { font-size: 10.5px; }
+
   footer {
     background: var(--navy); color: #b9c5de; padding: 30px 0; font-size: 13.5px;
   }
@@ -166,6 +173,7 @@
     <div class="brand">Li Jiang <span>·</span> 蒋力</div>
     <nav>
       <a href="#about" class="en-only">About</a><a href="#about" class="zh-only">关于</a>
+      <a href="#news" class="en-only">News</a><a href="#news" class="zh-only">新闻</a>
       <a href="#research" class="en-only">Research</a><a href="#research" class="zh-only">研究</a>
       <a href="#industry" class="en-only">Industry</a><a href="#industry" class="zh-only">产业</a>
       <a href="#publications" class="en-only">Publications</a><a href="#publications" class="zh-only">论文</a>
@@ -269,6 +277,21 @@
     </div>
   </div>
 </section>
+
+<!-- __NEWS_START__ -->
+<section id="news">
+  <div class="wrap">
+    <h2 class="sec"><span class="en-block">News</span><span class="zh-block">新闻动态</span></h2>
+    <ul class="news-list">
+<li class="en-only"><span class="nd">2026-08-15</span> 🎉 Junjie Wang: <strong>（示例）Efficient Parallel Inference Optimization for Large-Model Training</strong> (accepted) at HPCA 2027 <span class='tag tag-b'>A</span></li>
+<li class="zh-only"><span class="nd">2026-08-15</span> 🎉 恭喜王俊杰：《（示例）面向高效大模型训练的并行推理优化》 (被接收) ，发表于 HPCA 2027 <span class='tag tag-b'>A</span></li>
+<li class="en-only"><span class="nd">2026-07-20</span> （示例）荣获 ACM SIGDA 突出青年学者奖</li>
+<li class="zh-only"><span class="nd">2026-07-20</span> （示例）荣获 ACM SIGDA 突出青年学者奖</li>
+    </ul>
+
+  </div>
+</section>
+<!-- __NEWS_END__ -->
 
 <!-- Research -->
 <section id="research" class="soft">
