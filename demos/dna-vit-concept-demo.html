@@ -92,7 +92,7 @@
   </style>
   <div class="hero">
     <h2>DNA-ViT：一个可渐进“发育”的 ViT 模型档案</h2>
-    <p class="subtitle">核心演示：静态 PTQ 无法适配异构预算；DNA-ViT 先恢复关键功能单元，再随 bitstream 到达逐步细化模型。</p>
+    <p class="subtitle">核心演示：静态 PTQ 难以适配不同存储预算；DNA-ViT 先恢复关键功能单元，再随 bitstream 到达逐步细化模型。</p>
   </div>
   <div class="wrap">
     <section class="panel">
@@ -145,10 +145,6 @@
             <input id="dnv2-budget" type="range" min="35" max="100" value="75" step="1">
           </div>
           <div>
-            <label for="dnv2-bandwidth">传输带宽 MiB/s：<span id="dnv2-bandwidth-label">10</span></label>
-            <input id="dnv2-bandwidth" type="range" min="2" max="50" value="10" step="1">
-          </div>
-          <div>
             <label for="dnv2-model">backbone</label>
             <select id="dnv2-model"><option>ViT-S</option><option selected>ViT-B</option><option>DeiT-S</option><option>DeiT-B</option><option>Swin-S</option><option>Swin-B</option></select>
           </div>
@@ -159,7 +155,7 @@
           <div class="metrics">
             <div class="metric"><small>当前 Top-1</small><strong id="dnv2-top1">49.9%</strong></div>
             <div class="metric"><small>已传 payload</small><strong id="dnv2-payload">7.59 MiB</strong></div>
-            <div class="metric"><small>等待时间</small><strong id="dnv2-time">0.76 s</strong></div>
+            <div class="metric"><small>领先最佳 baseline</small><strong id="dnv2-gain">+0.89%</strong></div>
             <div class="metric"><small>恢复阶段</small><strong id="dnv2-stage">Coding</strong></div>
           </div>
         </aside>
@@ -195,7 +191,7 @@
     <section class="panel">
       <div class="panel-title"><strong>一句话 takeaway</strong><span class="tag">for group meeting</span></div>
       <div class="takeaways">
-        <div><b>压缩对象从“静态权重”变成“可表达档案”</b><span>一个 archive 可以服务不同带宽、存储与精度需求。</span></div>
+        <div><b>压缩对象从“静态权重”变成“可表达档案”</b><span>一个 archive 可以服务不同存储预算与精度需求。</span></div>
         <div><b>关键单元优先恢复</b><span>Hessian-aware allocation 把预算投向对任务最敏感的功能区域。</span></div>
         <div><b>低预算时收益最大</b><span>先恢复 functional skeleton，让模型在完整 stream 到达前就可用。</span></div>
       </div>
@@ -207,7 +203,6 @@
       if (!root) return;
       const $ = (id) => root.querySelector('#' + id);
       const budgetEl = $('dnv2-budget');
-      const bandwidthEl = $('dnv2-bandwidth');
       const modelEl = $('dnv2-model');
       const bitEl = $('dnv2-bit');
       const payloadFull = 10.119;
@@ -300,13 +295,16 @@
         widths.forEach((w,i)=>{const n=$('dnv2-s'+(i+1)); n.style.width=(w/100*100)+'%'; n.style.opacity=w>1?1:.18; n.textContent=w>8?labels[i]:'';});
       }
       function update(){
-        const p=+budgetEl.value, bw=+bandwidthEl.value;
-        const acc=interp(recoveryAnchors,p), payload=payloadFull*p/100, wait=payload/bw, st=stageFor(p);
-        $('dnv2-budget-label').textContent=p+'%'; $('dnv2-bandwidth-label').textContent=bw;
-        $('dnv2-top1').textContent=acc.toFixed(acc>60?1:2)+'%'; $('dnv2-payload').textContent=payload.toFixed(2)+' MiB'; $('dnv2-time').textContent=(wait<1?wait.toFixed(2):wait.toFixed(1))+' s'; $('dnv2-stage').textContent=st[0]; $('dnv2-stream-label').textContent=st[1];
+        const p=+budgetEl.value;
+        const acc=interp(recoveryAnchors,p), payload=payloadFull*p/100, st=stageFor(p);
+        const row=top1[bitEl.value][modelEl.value];
+        const bestBaseline=Math.max(row.PTQ4ViT,row.APQ,row.TSPTQ,row.AMP);
+        const gain=row.Ours-bestBaseline;
+        $('dnv2-budget-label').textContent=p+'%';
+        $('dnv2-top1').textContent=acc.toFixed(acc>60?1:2)+'%'; $('dnv2-payload').textContent=payload.toFixed(2)+' MiB'; $('dnv2-gain').textContent=(gain>=0?'+':'')+gain.toFixed(2)+'%'; $('dnv2-stage').textContent=st[0]; $('dnv2-stream-label').textContent=st[1];
         updateStream(p); drawRecovery(); drawBars(); drawHeat();
       }
-      [budgetEl,bandwidthEl,modelEl,bitEl].forEach(n=>n.addEventListener('input',update));
+      [budgetEl,modelEl,bitEl].forEach(n=>n.addEventListener('input',update));
       update();
     })();
   </script>
