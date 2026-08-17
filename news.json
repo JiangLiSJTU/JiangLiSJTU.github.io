@@ -10,11 +10,11 @@
       "first_author": "",
       "first_author_en": "",
       "equal_first": false,
-      "title_zh": "Look Once, Compute Less：面向自适应 BEV 表示的时空冗余感知存算一体（CIM）加速器",
+      "title_zh": "Look Once, Compute Less: A Spatio-Temporal Redundancy-Aware CIM Accelerator for Adaptive BEV Representation",
       "title_en": "Look Once, Compute Less: A Spatio-Temporal Redundancy-Aware CIM Accelerator for Adaptive BEV Representation",
       "status_zh": "被接收",
       "status_en": "accepted",
-      "note_zh": "（IEEE Author Gateway 要求作者确认；第一作者待确认）",
+      "note_zh": "",
       "note_en": ""
     },
     {
@@ -26,7 +26,7 @@
       "first_author": "",
       "first_author_en": "",
       "equal_first": false,
-      "title_zh": "SqzAct：通过块级挤压抑制激活异常值，实现高效 4-bit 大模型推理",
+      "title_zh": "SqzAct: Taming Activation Outliers for Efficient 4-bit LLM Inference via Block-Level Squeezing",
       "title_en": "SqzAct: Taming Activation Outliers for Efficient 4-bit LLM Inference via Block-Level Squeezing",
       "status_zh": "被接收",
       "status_en": "accepted",
