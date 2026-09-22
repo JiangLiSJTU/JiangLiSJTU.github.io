@@ -264,7 +264,7 @@
       "venue": "ACM TACO",
       "venue_year": 2026,
       "ccf": "A",
-      "first_author": "杨宁、Chenyang Guan",
+      "first_author": "杨宁、管陈洋",
       "first_author_en": "Ning Yang, Chenyang Guan",
       "equal_first": true,
       "title_zh": "LOAD: Enabling Low-Bit Group Quantization for Vision Transformers via Adaptive Data Formats",
