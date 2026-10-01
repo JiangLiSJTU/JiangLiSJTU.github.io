@@ -2,6 +2,15 @@
   "_comment": "单一事实来源：主页 News/新闻栏 + news.html 时间线的数据。用 `python3 maintain.py add` 添加，或手工编辑。按 date 降序展示。",
   "items": [
     {
+      "date": "2026-10-01",
+      "type": "award",
+      "title_zh": "🎉 恭喜课题组刘方鑫老师获评 2026 ACM SIGHPC China新星奖",
+      "title_en": "🎉 Congratulations to Dr. Fangxin Liu on receiving the 2026 ACM SIGHPC China Rising Star Award",
+      "note_zh": "评选结果公示",
+      "note_en": "Award results announcement",
+      "url": "https://mp.weixin.qq.com/s/WGEruz6dnTqbACoZWij2AQ"
+    },
+    {
       "date": "2026-08-21",
       "type": "paper",
       "venue": "EMNLP",
